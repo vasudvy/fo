@@ -12,6 +12,15 @@ import { PhotoBoothApp } from "@/apps/photo-booth";
 import { SynthApp } from "@/apps/synth";
 import { IpodApp } from "@/apps/ipod";
 import { TerminalApp } from "@/apps/terminal";
+import { ExcelApp } from "@/apps/excel";
+import { MailApp } from "@/apps/mail";
+import { GovernmentApp } from "@/apps/government";
+import { TeamApp } from "@/apps/team";
+import { AirtableApp } from "@/apps/airtable";
+import { MetabaseApp } from "@/apps/metabase";
+import { SuperSpotApp } from "@/apps/superspot";
+import { CulturalApp } from "@/apps/cultural";
+import { CapTabApp } from "@/apps/captab";
 import { appIds } from "./appIds";
 import type {
   BaseApp,
@@ -145,6 +154,69 @@ export const appRegistry = {
       defaultSize: { width: 365, height: 415 },
       minSize: { width: 320, height: 415 },
       maxSize: { width: 365, height: 600 },
+    } as WindowConstraints,
+  },
+  [ExcelApp.id]: {
+    ...ExcelApp,
+    windowConfig: {
+      defaultSize: { width: 900, height: 650 },
+      minSize: { width: 600, height: 400 },
+    } as WindowConstraints,
+  },
+  [MailApp.id]: {
+    ...MailApp,
+    windowConfig: {
+      defaultSize: { width: 800, height: 600 },
+      minSize: { width: 500, height: 400 },
+    } as WindowConstraints,
+  },
+  [GovernmentApp.id]: {
+    ...GovernmentApp,
+    windowConfig: {
+      defaultSize: { width: 850, height: 700 },
+      minSize: { width: 600, height: 500 },
+    } as WindowConstraints,
+  },
+  [TeamApp.id]: {
+    ...TeamApp,
+    windowConfig: {
+      defaultSize: { width: 1000, height: 700 },
+      minSize: { width: 700, height: 500 },
+    } as WindowConstraints,
+  },
+  [AirtableApp.id]: {
+    ...AirtableApp,
+    windowConfig: {
+      defaultSize: { width: 950, height: 650 },
+      minSize: { width: 650, height: 450 },
+    } as WindowConstraints,
+  },
+  [MetabaseApp.id]: {
+    ...MetabaseApp,
+    windowConfig: {
+      defaultSize: { width: 900, height: 650 },
+      minSize: { width: 600, height: 450 },
+    } as WindowConstraints,
+  },
+  [SuperSpotApp.id]: {
+    ...SuperSpotApp,
+    windowConfig: {
+      defaultSize: { width: 800, height: 600 },
+      minSize: { width: 500, height: 400 },
+    } as WindowConstraints,
+  },
+  [CulturalApp.id]: {
+    ...CulturalApp,
+    windowConfig: {
+      defaultSize: { width: 750, height: 600 },
+      minSize: { width: 500, height: 400 },
+    } as WindowConstraints,
+  },
+  [CapTabApp.id]: {
+    ...CapTabApp,
+    windowConfig: {
+      defaultSize: { width: 900, height: 700 },
+      minSize: { width: 600, height: 500 },
     } as WindowConstraints,
   },
 } as const;
